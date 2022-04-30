@@ -52,6 +52,7 @@ public class Operators {
         d3 = (d1*d2)/GCD(d1,d2);
         n3 = ((d3/d1)*n1) + (opr.equals("+") ? 1 : -1) * ((d3/d2)*n2);
       }
+      //System.out.println(w3 + "_" + n3 + "/" + d3);
       Integer sign = n3 >= 0 ? 1 : -1;
       n3 = Math.abs(n3);
       if (n3>d3) {
@@ -63,6 +64,7 @@ public class Operators {
         n3 /= gcd;
         d3 /= gcd;
       }
+      //System.out.println(w3 + "_" + n3 + "/" + d3);
       return new Integer[]{w3, n3, d3, sign};
   }
 

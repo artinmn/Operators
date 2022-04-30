@@ -1,0 +1,5 @@
+javac .\Operators.java .\OperatorsTest.java .\TestRunner.java
+
+java .\Operators.java
+
+c:; cd 'c:\Users\Hp Elitebook 840 G4\Documents\Operators'; & 'C:\Program Files\Java\jdk-18.0.1\bin\java.exe' '--enable-preview' -cp "c:\\Users\\Hp Elitebook 840 G4\\Documents\\Operators;c:\\Users\\Hp Elitebook 840 G4\\Documents\\Operators\\lib\\hamcrest-core-1.3.jar;c:\\Users\\Hp Elitebook 840 G4\\Documents\\Operators\\lib\\junit-4.13.2.jar" 'TestRunner'
