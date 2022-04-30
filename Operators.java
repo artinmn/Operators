@@ -25,6 +25,7 @@ public class Operators {
       System.out.println("The entered operation is in wrong format.");
     }
   }
+  
   public Integer[] calculateOperation(String num1, String opr, String num2) {
       String[] whl1 = num1.contains("_") ? num1.split("_") : new String[]{"0", num1};
       String[] frc1 = num1.contains("/") ? whl1[1].split("/") : new String[]{whl1[1], "1"};
