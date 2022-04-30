@@ -14,8 +14,6 @@ enter your operation as follow containing at least one whitespace between:
 
 ? WHOLE1_NUMERATOR1/DENOMINATOR1 (+ | * | - | /) WHOLE2_NUMERATOR2/DENOMINATOR2
 
-* "Please note choosing large values might lead to overflow condition and return wrong results"
-
 ***** TESTING THE PROGRAM *****
 
 run the test runner as follow in command line:
@@ -28,6 +26,10 @@ test cases are supplied in OperatorsTest.java file as arrays element as followin
 { WHOLE1, NUMERATOR1, DENOMINATOR1, WHOLE2, NUMERATOR2, DENOMINATOR2, OPERATOR, EXPECTED_RESULT[NULL if not supplied] }
 
 { 3, 3, 4, 0, 1, 2, "*", null }
+
+Please note the following for above commands:
+* "Denominators can't be zero and if the operation is division, second numerator can't be zero either"
+* "Choosing large values might lead to overflow condition and return wrong results"
 
 
 
