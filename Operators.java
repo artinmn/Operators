@@ -7,12 +7,12 @@ public class Operators {
     System.out.print("Enter your operation: ");
     try {
       scan.next("\\?");
-      String num1 = scan.next("[0-9]/[1-9]|[0-9]_[0-9]/[1-9]|[0-9]");
+      String pattern1 = "[0-9]/[1-9]|[0-9]_[0-9]/[1-9]|[0-9]";
+      String pattern2 = "[1-9]/[1-9]|[0-9]_[1-9]/[1-9]|[1-9]_[0-9]/[1-9]|[1-9]";
+      String num1 = scan.next(pattern1);
       String opr = scan.next("\\*|\\/|\\+|\\-");
-      String num2 = opr.equals("/") ? scan.next("[1-9]/[1-9]|[0-9]_[1-9]/[1-9]|[1-9]") : 
-        scan.next("[0-9]/[1-9]|[0-9]_[0-9]/[1-9]|[0-9]");
+      String num2 = !opr.equals("/") ? scan.next(pattern1) : scan.next(pattern2);
       scan.close();
-      //calculateOperation calculate new CalculateOperation();
       Integer[] result = new Operators().calculateOperation(num1, opr, num2);
       Integer w3 = result[0];
       Integer n3 = result[1];
