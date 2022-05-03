@@ -2,16 +2,19 @@ import java.util.*;
 
 public class Operators {
   public static void main(String[] args) {
-    Scanner scan = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     System.out.print("? ");
     try {
-      //scan.next("\\?");
       String pattern1 = "\\d+|\\d+/\\d*[1-9]\\d*|\\d+_\\d+/\\d*[1-9]\\d*";
       String pattern2 = "\\d*[1-9]\\d*|\\d*[1-9]\\d*/\\d*[1-9]\\d*|\\d+_\\d*[1-9]\\d*/\\d*[1-9]\\d*|\\d*[1-9]\\d*_\\d+/\\d*[1-9]\\d*";
-      String num1 = scan.next(pattern1);
-      String opr = scan.next("\\*|\\/|\\+|\\-");
-      String num2 = !opr.equals("/") ? scan.next(pattern1) : scan.next(pattern2);
-      scan.close();
+      String num1 = scanner.next(pattern1);
+      String opr = scanner.next("\\*|\\/|\\+|\\-");
+      String num2 = !opr.equals("/") ? scanner.next(pattern1) : scanner.next(pattern2);
+      String enterKey = scanner.nextLine();
+      scanner.close();
+      if (!enterKey.isBlank()) {
+        throw new InputMismatchException();
+      }
       Integer[] result = new Operators().calculateOperation(num1, opr, num2);
       Integer w3 = result[0];
       Integer n3 = result[1];
@@ -22,7 +25,7 @@ public class Operators {
       (sign > 0 ? "" : "-") + (w3 == 0 ? "" : (Integer.toString(w3) + (n3 == 0 ? "" : "_"))) + 
         (n3 == 0 ? "" : (Integer.toString(n3) + (d3 == 1 ? "" : "/" + Integer.toString(d3))));
       System.out.println("= " + output);
-    } catch(InputMismatchException e) {
+    } catch(InputMismatchException|IllegalStateException e) {
       System.out.println("The entered operation is in wrong format.");
     } catch(NumberFormatException e) {
       System.out.println("The entered number is too large.");
