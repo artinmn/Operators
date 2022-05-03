@@ -20,7 +20,7 @@ public class Operators {
       Integer n3 = result[1];
       Integer d3 = result[2];
       Integer sign = result[3];
-      System.out.println(result[0] + "_" + result[1] + "/" + result[2]);
+      //System.out.println(result[0] + "_" + result[1] + "/" + result[2]);
       String output = "";
       if (w3 == 0 && n3 == 0)
         output = "0";
