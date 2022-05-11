@@ -29,7 +29,7 @@ test cases are supplied in OperatorsTest.java file as arrays element as followin
 
 Please note the following for above commands:
 * "Denominators can't be zero and if the operation is division, second numerator can't be zero either"
-* "Choosing large values might lead to overflow condition and return wrong results"
+* "Choosing large values or results of large values that will not fit in 32 bit signed Integer and overflow will return approriate error message."
 
 
 
